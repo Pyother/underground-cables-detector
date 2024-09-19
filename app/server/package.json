@@ -1,0 +1,15 @@
+{
+  "name": "underground-cable-detector-server",
+  "version": "1.0.0",
+  "description": "Underground cable detector simple server. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Piotr Sobol",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^3.13.0",
+    "graphql": "^16.9.0"
+  }
+}
