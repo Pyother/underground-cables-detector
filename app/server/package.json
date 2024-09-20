@@ -4,12 +4,15 @@
   "description": "Underground cable detector simple server. ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./src/index.mjs"
   },
   "author": "Piotr Sobol",
   "license": "ISC",
   "dependencies": {
     "apollo-server": "^3.13.0",
-    "graphql": "^16.9.0"
+    "colors": "^1.4.0",
+    "graphql": "^16.9.0",
+    "nodemon": "^3.1.7"
   }
 }
