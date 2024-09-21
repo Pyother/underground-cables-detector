@@ -1,9 +1,16 @@
 // * Main packages:
 import express from 'express';
-import { ApolloServer } from 'apollo-server-express';  
+import { ApolloServer } from 'apollo-server-express';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-// * GraphQL imports:
-import { typeDefs } from './schema/schema.mjs';
+// * Utils: Definicja __dirname
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// * GraphQL imports: Wczytanie pliku .graphql
+const typeDefs = fs.readFileSync(path.join(__dirname, './schema/schema.gql'), 'utf8');
 import { resolvers } from './resolvers/resolvers.mjs';
 
 // * Own packages:
@@ -15,11 +22,11 @@ import 'colors';
 const API_PORT = process.env.PORT || 5000;
 
 async function startServer() {
-    const app = express();  
+    const app = express();
 
     const server = new ApolloServer({
         typeDefs,
-        resolvers
+        resolvers,
     });
 
     await server.start();
@@ -34,6 +41,6 @@ async function startServer() {
     });
 }
 
-startServer().catch(error => {
-  console.error('Error starting server: ', error);
+startServer().catch((error) => {
+    console.error('Error starting server: ', error);
 });

@@ -1,0 +1,7 @@
+type Query {
+    checkApiStatus: ApiStatus
+}
+
+type ApiStatus {   
+    status: String!
+}
