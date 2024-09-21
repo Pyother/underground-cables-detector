@@ -1,0 +1,17 @@
+@import '../../components/navigation/navigation.css';
+@import '../../components/content/content.css';
+@import '../../components/header/header.css';
+@import './utils.css';
+
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--text-color-primary);
+    background-color: var(--bg-color-primary);
+}
+
+:root {
+    --text-color-primary: black;
+    --bg-color-primary: white;
+    --accent-color-primary: yellow;
+}
