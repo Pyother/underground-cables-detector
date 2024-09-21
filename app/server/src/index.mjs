@@ -1,18 +1,39 @@
+// * Main packages:
+import express from 'express';
+import { ApolloServer } from 'apollo-server-express';  
+
+// * GraphQL imports:
+import { typeDefs } from './schema/schema.mjs';
+import { resolvers } from './resolvers/resolvers.mjs';
+
+// * Own packages:
+import createRoutes from './routes.mjs';
+
+// * Utils:
 import 'colors';
-import { ApolloServer } from 'apollo-server';  
-import { typeDefs } from './schema.mjs';
-import { resolvers } from './resolvers.mjs';
 
-const API_PORT = 4000;
+const API_PORT = process.env.PORT || 5000;
 
-const server = new ApolloServer({
-    typeDefs,
-    resolvers
-});
+async function startServer() {
+    const app = express();  
 
-server.listen({port: API_PORT || 4000}).then(({url}) => {
-    console.log(`🚀 Server ready at ${url}`.green);
-    console.log('Query at: '.green + 'https://studio.apollographql.com/dev'.yellow);
-}).catch((error) => {
-    console.error('Error starting server: ', error);
+    const server = new ApolloServer({
+        typeDefs,
+        resolvers
+    });
+
+    await server.start();
+
+    server.applyMiddleware({ app });
+
+    createRoutes(app);
+
+    app.listen(API_PORT, () => {
+        console.log(`🚀 Server ready at http://localhost:${API_PORT}${server.graphqlPath}`.green);
+        console.log('Query at: '.green + 'https://studio.apollographql.com/dev'.yellow);
+    });
+}
+
+startServer().catch(error => {
+  console.error('Error starting server: ', error);
 });
