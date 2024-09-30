@@ -1,4 +1,4 @@
-export const resolvers = {
+const resolvers = {
     Query: {
         checkApiStatus: () => {
             return {
@@ -7,3 +7,5 @@ export const resolvers = {
         }
     }
 }
+
+module.exports = { resolvers };
