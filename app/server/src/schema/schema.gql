@@ -1,7 +1,17 @@
-type Query {
-    checkApiStatus: ApiStatus
+type DistanceMeasurement {
+    measurementTime: String
+    measurement: DistanceMeasurementData
+    meta: MetaData
 }
 
-type ApiStatus {   
-    status: String!
+type DistanceMeasurementData {
+    value: Float
+}
+
+type MetaData {
+    operator: String
+}
+
+type Query {
+    getTempData: DistanceMeasurement
 }

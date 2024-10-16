@@ -10,7 +10,7 @@ dotenv.config({ path: path.resolve(__dirname, '../../../.env') });
 const mongoUri = process.env.MONGODB_URI;
 const dbname = process.env.DB_NAME;
 const client = new MongoClient(mongoUri);
-const collectionName = "measurements";
+const collectionName = "distance-measurements-collection";
 
 function connect() {
     return client.connect()
