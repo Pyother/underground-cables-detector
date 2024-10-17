@@ -39,19 +39,20 @@ const App = () => {
     const GET_DISTANCE_MEASUREMENTS_DATA = gql`
         query GetDistanceMeasurementsData {
             getDistanceMeasurementsData {
-            measurementTime
-            measurement {
-                value
-            }
-            meta {
-                operator
-            }
+                measurementTime
+                measurement {
+                    value
+                }
+                meta {
+                    operator
+                }
             }
         }
     `;
 
     const { loading, error, data } = useQuery(GET_DISTANCE_MEASUREMENTS_DATA);
 
+    // Temp useEffect for displaying gql query result. 
     useEffect(() => {
         if (loading) {
             console.log('loading');
