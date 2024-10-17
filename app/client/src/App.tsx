@@ -36,21 +36,21 @@ const App = () => {
         }
     }, [dispatch]);
 
-    const GET_TEMP_DATA = gql`
-        query GetTempData {
-            getTempData {
-                measurementTime
-                measurement {
-                    value
-                }
-                meta {
-                    operator
-                }
+    const GET_DISTANCE_MEASUREMENTS_DATA = gql`
+        query GetDistanceMeasurementsData {
+            getDistanceMeasurementsData {
+            measurementTime
+            measurement {
+                value
+            }
+            meta {
+                operator
+            }
             }
         }
     `;
 
-    const { loading, error, data } = useQuery(GET_TEMP_DATA);
+    const { loading, error, data } = useQuery(GET_DISTANCE_MEASUREMENTS_DATA);
 
     useEffect(() => {
         if (loading) {

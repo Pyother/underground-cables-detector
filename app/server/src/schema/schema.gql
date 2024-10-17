@@ -13,5 +13,5 @@ type MetaData {
 }
 
 type Query {
-    getTempData: DistanceMeasurement
+    getDistanceMeasurementsData: [DistanceMeasurement]
 }

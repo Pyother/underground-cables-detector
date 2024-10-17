@@ -1,9 +1,22 @@
 {
-    "measurementTime": "",
-    "measurement": {
-        "value": 1
-    },
-    "meta": {
-        "operator": "Piotr Sobol"
-    }
+    "distanceMeasurements" : [
+        {
+            "measurementTime": "",
+            "measurement": {
+                "value": 1
+            },
+            "meta": {
+                "operator": "Piotr Sobol"
+            }
+        },
+        {
+            "measurementTime": "",
+            "measurement": {
+                "value": 1
+            },
+            "meta": {
+                "operator": "Piotr Sobol"
+            }
+        }
+    ]
 }
