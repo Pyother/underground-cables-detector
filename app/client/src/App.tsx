@@ -4,6 +4,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setDeviceType } from './features/layoutFeatures/DeviceTypeSlice.js';
 import { RootState } from './store/store';
 
+// * GraphQL:
+import { gql, useQuery } from '@apollo/client';
+
 // * MUI:
 import { Grid, Stack } from '@mui/material';
 
@@ -32,6 +35,33 @@ const App = () => {
             window.removeEventListener('resize', handleResize);
         }
     }, [dispatch]);
+
+    const GET_TEMP_DATA = gql`
+        query GetTempData {
+            getTempData {
+                measurementTime
+                measurement {
+                    value
+                }
+                meta {
+                    operator
+                }
+            }
+        }
+    `;
+
+    const { loading, error, data } = useQuery(GET_TEMP_DATA);
+
+    useEffect(() => {
+        if (loading) {
+            console.log('loading');
+        } else {
+            console.log(data);
+        }
+        if (error) {
+            console.log(error);
+        }
+    }, [data, error, loading])
 
     return (
         <>
