@@ -22,6 +22,7 @@ const App = () => {
 
     const dispatch = useDispatch();
     const deviceType = useSelector((state: RootState) => state.deviceType.deviceType);
+    const theme = useSelector((state: RootState) => state.theme.theme);
 
     useEffect(() => {
         const handleResize = () => {
@@ -35,6 +36,11 @@ const App = () => {
             window.removeEventListener('resize', handleResize);
         }
     }, [dispatch]);
+
+    // * Setting theme:
+    useEffect(() => {
+        document.body.className = theme;
+    }, [theme]);
 
     const GET_DISTANCE_MEASUREMENTS_DATA = gql`
         query GetDistanceMeasurementsData {

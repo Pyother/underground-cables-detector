@@ -15,10 +15,21 @@ body {
     height: 100vh;
 }
 
-:root {
+body.light {
+    /*Light theme: */
+    --text-color-primary: #616161;
+    --bg-color-primary: #f3f3f3;
+    --bg-color-secondary: white;
+}
+
+body.dark {
+    /*Dark theme: */
     --text-color-primary: white;
     --bg-color-primary: #1c2028;
     --bg-color-secondary: black;
+}
+
+:root {
     --accent-color-primary: gold;
     --padding: 1em;
 }
