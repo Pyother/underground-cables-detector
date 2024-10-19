@@ -18,8 +18,8 @@ body {
 body.light {
     /*Light theme: */
     --text-color-primary: #616161;
-    --bg-color-primary: #f3f3f3;
-    --bg-color-secondary: white;
+    --bg-color-primary: white;
+    --bg-color-secondary: #f3f3f3;
 }
 
 body.dark {
@@ -30,7 +30,7 @@ body.dark {
 }
 
 :root {
-    --accent-color-primary: gold;
+    --accent-color-primary: #2596be;
     --padding: 1em;
 }
 
