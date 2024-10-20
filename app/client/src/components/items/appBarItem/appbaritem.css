@@ -1,0 +1,13 @@
+
+.appbar-item-container {
+    padding: 1em;
+    background-color: var(--bg-color-secondary) !important;
+    width: fit-content;
+    height: min-content;
+    border-radius: var(--border-radius) !important;
+    margin-right: var(--distance) !important;
+}
+
+.appbar-icon {
+    color: var(--text-color-primary) !important;
+}

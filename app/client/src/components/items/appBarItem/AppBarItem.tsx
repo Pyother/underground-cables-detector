@@ -5,33 +5,31 @@ import React, { useState } from 'react';
 import './appbaritem.css';
 
 // * MUI:
-import {
-    IconButton
-} from '@mui/material';
+import { IconButton } from '@mui/material';
 
 interface AppBarItemProps {
-    Icon: React.ElementType;
-    SecondaryIcon?: React.ElementType;
+    Icon: React.ReactNode;
+    SecondaryIcon?: React.ReactNode;
     onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 const AppBarItem: React.FC<AppBarItemProps> = ({ Icon, SecondaryIcon, onClick }) => {
-
-    const [CurrentIcon, setCurrentIcon] = useState<React.ElementType>(Icon);
+    const [currentIcon, setCurrentIcon] = useState(Icon);
 
     return (
         <IconButton 
-            className="appbar-container"
+            className="appbar-item-container"
             onClick={(event): void => {
                 onClick(event);
-                if(SecondaryIcon) {
-                    setCurrentIcon(SecondaryIcon);
+                if (SecondaryIcon) {
+                    if(currentIcon === SecondaryIcon) setCurrentIcon(Icon);
+                    else setCurrentIcon(SecondaryIcon);
                 }
             }} 
         >
-            {<CurrentIcon className="appbar-icon" />}
+            {currentIcon}
         </IconButton>
-    )
-}
+    );
+};
 
 export default AppBarItem;

@@ -13,7 +13,7 @@ import './title.css';
 const Title = ({title, subtitle}: {title: string, subtitle: string}) => {
     return (
         <Stack>
-            <Typography variant="h5">
+            <Typography variant="h4">
                 {title}
             </Typography>
             <Typography variant="subtitle2">

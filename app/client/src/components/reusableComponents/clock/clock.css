@@ -1,0 +1,5 @@
+.clock-container {
+    display: flex;
+    text-align: right;
+    margin-left: calc(3 * var(--distance));
+}
