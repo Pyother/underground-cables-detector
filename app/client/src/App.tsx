@@ -80,15 +80,17 @@ const App = () => {
                     <Content />
                 </Stack> :
                 <Grid container className='app'>
-                    <Grid item xs={12} sm={3} md={2}>
+                    <Grid item xs={0} sm={0.5} md={1} />
+                    <Grid item xs={12} sm={2} md={1}>
                         <Navigation />
                     </Grid>
-                    <Grid item xs={12} sm={9} md={10}>
+                    <Grid item xs={12} sm={9} md={9}>
                         <Stack className="header-content-container">
                             <Header />
                             <Content />
                         </Stack>
                     </Grid>
+                    <Grid item xs={0} sm={0.5} md={1}/>
                 </Grid>
             }
         </>

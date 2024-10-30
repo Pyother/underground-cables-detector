@@ -1,0 +1,64 @@
+body {
+
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+
+    /* Fonts: */
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+
+    /* Vars: */
+    
+    --bg-primary: lightgrey;
+    --bg-secondary: white;
+    --text-primary: black;
+    --text-secondary: grey;
+
+    --border: 1px solid var(--text-secondary);
+    --border-radius: 0.5em;
+    --margin: 1em 0.5em;
+}
+
+.app {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    background-color: lightgrey;
+}
+
+/* UTILS */
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---------------- */
+
+/* LAYOUT */
+
+
+
+/* ---------------- */
+
+/* CANVAS */
+
+#canvas { 
+    border: var(--border);
+    border-radius: var(--border-radius);
+    background-color: var(--bg-secondary);
+}
+
+/* ---------------- */
+
+/* COMPONENTS */
+
+.btn {
+    margin: var(--margin);
+}
+
+/* ---------------- */

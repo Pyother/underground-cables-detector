@@ -4,7 +4,7 @@
 }
 
 .navigation, .header, .content {
-    border: 1px solid var(--bg-color-secondary);
+    /*border: 1px solid var(--bg-color-secondary);*/
     padding: var(--padding);
 }
 
@@ -13,7 +13,13 @@
 }
 
 .navigation {
-    
+    display: flex;
+    justify-content: flex-start;
+}
+
+.navigation-container {
+    background-color: var(--bg-color-secondary) !important;
+    border-radius: var(--border-radius);
 }
 
 .header {

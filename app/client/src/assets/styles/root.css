@@ -24,9 +24,9 @@ body.light {
 
 body.dark {
     /*Dark theme: */
-    --text-color-primary: white;
-    --bg-color-primary: #1c2028;
-    --bg-color-secondary: black;
+    --text-color-primary: #c8c8c8;
+    --bg-color-primary: #252526;
+    --bg-color-secondary: #1e1e1e;
 }
 
 :root {
