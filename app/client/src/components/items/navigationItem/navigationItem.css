@@ -1,5 +1,4 @@
 .navigation-item-container {
-    padding: var(--padding) !important;
     background-color: var(--bg-color-secondary) !important;
     border-radius: var(--border-radius) !important;
     color: var(--text-color-primary) !important;

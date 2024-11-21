@@ -28,6 +28,7 @@
 
 .content {  
     height: 100%;
+    border: 1px solid red;
 }
 
 @media (max-width: 600px) {

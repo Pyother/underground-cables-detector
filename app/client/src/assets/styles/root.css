@@ -4,6 +4,15 @@
 @import './layout.css';
 @import './utils.css';
 
+:root {
+    --accent-color-primary: #94b9ff;
+    --accent-color-secondary: #c9f5ff;
+    --selected-color: var(--accent-color-primary);
+    --border-radius: 0.25em;
+    --padding: 1em;
+    --distance: 0.5em;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -27,13 +36,6 @@ body.dark {
     --text-color-primary: #c8c8c8;
     --bg-color-primary: #252526;
     --bg-color-secondary: #1e1e1e;
-}
-
-:root {
-    --accent-color-primary: #2596be;
-    --border-radius: 0.25em;
-    --padding: 1em;
-    --distance: 0.5em;
 }
 
 #root {

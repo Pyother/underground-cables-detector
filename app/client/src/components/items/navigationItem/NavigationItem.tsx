@@ -1,5 +1,7 @@
 // * React:
 import React from 'react';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../../store/store';
 
 // * MUI:
 import {
@@ -19,12 +21,19 @@ interface NavigationItemProps {
 }
 
 const NavigationItem: React.FC<NavigationItemProps> = ({sectionName, Icon, onClick, isClickable, iconSize}) => {
+
+    const currentSection = useSelector((state: RootState) => state.currentSection.currentSection);
+
     return (
         <IconButton 
-            className="navigation-item-container"
+            className={currentSection.name === sectionName ? 'selected navigation-item-container' : 'navigation-item-container'}
             disableFocusRipple={!isClickable}
             disableRipple={!isClickable}
-            style={{fontSize: iconSize && iconSize === 'large' ? 'xx-large' : 'larger'}}
+            style={{
+                fontSize: iconSize && iconSize === 'large' ? 'xx-large' : 'larger',
+                padding: sectionName === 'logo' ? 'calc(var(--padding) * 3 / 4)' : 'var(--padding)'
+            }}
+            onClick={onClick}
         >
             {Icon}
         </IconButton>
