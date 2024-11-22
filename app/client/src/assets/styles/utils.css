@@ -4,6 +4,18 @@
     align-items: center;
 }
 
+.right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 .bold {
     font-weight: bold !important;
 }

@@ -1,0 +1,17 @@
+.home-view-container {
+    width: 100%;
+}
+
+.home-view-item {
+    padding-bottom: var(--padding) !important; 
+}
+
+@media (min-width: 600px) {
+    .home-view-item {
+        padding-right: var(--padding) !important; 
+    }
+    
+    .home-view-item.no-right-margin {
+        padding-right: 0 !important;
+    }
+}

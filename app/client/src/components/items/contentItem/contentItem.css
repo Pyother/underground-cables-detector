@@ -1,3 +1,21 @@
 .content-item {
-    background-color: var();
+    height: calc(100% - 2 * var(--padding));
+    color: var(--text-color-primary);
+    background-color: var(--bg-color-secondary);
+    border-radius: var(--border-radius);
+    padding: var(--padding);;
 }
+
+.content-item-close-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start !important;
+}
+
+@media (max-width: 600px) {
+    .content-item {
+        width: calc(100% - 2em);
+    }
+}
+
