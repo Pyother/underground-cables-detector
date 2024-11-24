@@ -7,6 +7,9 @@
 :root {
     --accent-color-primary: #94b9ff;
     --accent-color-secondary: #c9f5ff;
+    --true-color: #006400;
+    --neutral-color: #F3C623;
+    --false-color: #AF1740;
     --selected-color: var(--accent-color-primary);
     --border-radius: 0.25em;
     --padding: 1em;
@@ -29,6 +32,8 @@ body.light {
     --text-color-primary: #616161;
     --bg-color-primary: white;
     --bg-color-secondary: #f3f3f3;
+    --bg-color-tertiary: #ececec;
+    --border: 1px solid #dedede;
 }
 
 body.dark {
@@ -36,6 +41,8 @@ body.dark {
     --text-color-primary: #c8c8c8;
     --bg-color-primary: #252526;
     --bg-color-secondary: #1e1e1e;
+    --bg-color-tertiary: #252526;
+    --border: 1px solid #0b0b0b;
 }
 
 #root {

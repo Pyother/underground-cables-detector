@@ -16,10 +16,27 @@
     align-items: center;
 }
 
+.border {
+    border: var(--border) !important;
+    border-radius: var(--border-radius);
+}
+
 .bold {
     font-weight: bold !important;
 }
 
 .selected {
     color: var(--selected-color) !important;
+}
+
+.icon-large {
+    font-size: larger !important;
+}
+
+.true {
+    color: var(--true-color) !important;
+}
+
+.false {
+    color: var(--false-color) !important;
 }

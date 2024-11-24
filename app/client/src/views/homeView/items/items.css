@@ -1,0 +1,14 @@
+.connection-item-cell {
+    background-color: var(--bg-color-tertiary);
+    border-radius: var(--border-radius);
+    padding-bottom: var(--padding);
+    width: 100%;
+}
+
+.connection-item-button {
+    padding: 0 !important;
+    width: 100% !important;
+    text-transform: none !important;
+    color: inherit !important;
+    font: inherit !important;
+}

@@ -12,7 +12,7 @@ import {
 
 interface ContentItemProps {
     title: string;
-    subtitle: string;
+    subtitle?: string;
     Icon: React.ReactNode,
     children: React.ReactNode;
     subtitleFirst?: boolean;
@@ -41,13 +41,13 @@ const ContentItem: React.FC<ContentItemProps> = ({ title, subtitle, Icon, childr
                 </div>
             </Stack>
             <>
-                {subtitleFirst && (
+                {subtitle && subtitleFirst && (
                     <Typography variant="subtitle2" className="content-item-subtitle">
                         {subtitle}
                     </Typography>
                 )}
                 {children}
-                {!subtitleFirst && (
+                {subtitle && !subtitleFirst && (
                     <Typography variant="subtitle2" className="content-item-subtitle">
                         {subtitle}
                     </Typography>

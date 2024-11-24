@@ -7,11 +7,21 @@ import currentSectionReducer from '../features/layoutFeatures/CurrentSectionSlic
 // * Style features:
 import themeReducer from '../features/styleFeatures/ThemeSlice';
 
+// * Network features:
+import connectionReducer from '../features/networkFeatures/ConnectionSlice';
+import wifiQualityReducer from '../features/networkFeatures/WiFiQualitySlice';
+
+// * Device state features:
+import energyReducer from '../features/deviceStateFeatures/EnergySlice';
+
 export const store = configureStore({
     reducer: {
         deviceType: deviceTypeReducer,
         currentSection: currentSectionReducer,
         theme: themeReducer,
+        connection: connectionReducer,
+        energy: energyReducer,
+        wifi: wifiQualityReducer,
     },
 });
 

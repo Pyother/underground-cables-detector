@@ -19,6 +19,7 @@
 .navigation-container {
     background-color: var(--bg-color-secondary) !important;
     border-radius: var(--border-radius);
+    border: var(--border);
 }
 
 .header {

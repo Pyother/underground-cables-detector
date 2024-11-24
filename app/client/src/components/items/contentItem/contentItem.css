@@ -3,7 +3,8 @@
     color: var(--text-color-primary);
     background-color: var(--bg-color-secondary);
     border-radius: var(--border-radius);
-    padding: var(--padding);;
+    border: var(--border);
+    padding: var(--padding);
 }
 
 .content-item-close-container {
