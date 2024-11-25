@@ -5,6 +5,7 @@
     height: min-content;
     border-radius: var(--border-radius) !important;
     margin-right: var(--distance) !important;
+    border: var(--border) !important;
 }
 
 .appbar-icon {
