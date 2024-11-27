@@ -1,5 +1,5 @@
 // * React and Redux:
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../store/store';
 
@@ -10,11 +10,16 @@ import './driveView.css';
 import {
     Grid,
     Stack,
-    Select
+    Select,
+    MenuItem,
 } from '@mui/material';
+
+// * React icons:
+import { TfiAngleDown } from "react-icons/tfi";
 
 const DriveView = () => {
 
+    const [selectedView, setSelectedView] = useState(1);
     const deviceType = useSelector((state: RootState) => state.deviceType.deviceType);
 
     return (
@@ -23,14 +28,21 @@ const DriveView = () => {
                 deviceType === 'mobile' || deviceType === 'tablet' ?
                 <Stack style={{height: '100%'}}>
                     <div className="drive-view-select-container">
-                        <Select>
-
+                        <Select 
+                            className="select"
+                            IconComponent={TfiAngleDown}
+                            variant="outlined"
+                            value={selectedView}
+                            onChange={(event) => setSelectedView(Number(event.target.value))}
+                        >
+                            <MenuItem value="1">Mapa</MenuItem>
+                            <MenuItem value="2">Podgląd wideo</MenuItem>
                         </Select>
                     </div>
-                    <div className="drive-view-cell">
-                        Wybór
+                    <div className="drive-view-cell center">
+                        {selectedView === 1 ? 'Mapa' : 'Podgląd wideo'}
                     </div>
-                    <div className="drive-view-cell">
+                    <div className="drive-view-cell center">
                         Kontroler
                     </div>
                 </Stack> :

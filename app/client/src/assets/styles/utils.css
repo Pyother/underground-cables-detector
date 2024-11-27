@@ -16,6 +16,10 @@
     align-items: center;
 }
 
+.text-color {
+    color: var(--text-color) !important;
+}
+
 .border {
     border: var(--border) !important;
     border-radius: var(--border-radius);
@@ -39,4 +43,74 @@
 
 .false {
     color: var(--false-color) !important;
+}
+
+.select {
+    border: var(--border) !important;
+    color: var(--text-color) !important;
+    border-radius: var(--border-radius) !important;
+    background-color: var(--bg-color-secondary) !important;
+    font-size: small !important;
+    transition: none !important; 
+}
+
+.select:active {
+    border: var(--border) !important;
+}
+
+.select:active,
+.select:hover,
+.select:focus-within {
+    border: var(--border) !important;
+    outline: none !important; 
+    box-shadow: none !important; 
+}
+
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+    border-style: none !important;
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: var(--border) !important;
+    box-shadow: none !important; 
+}
+
+.MuiList-root {
+    padding: 0 !important; 
+}
+
+.MuiMenuItem-root {
+    transition: none !important; 
+    background-color: var(--bg-color-secondary) !important;
+    color: var(--text-color) !important;
+    font-weight: normal !important;
+    font-size: small !important;
+}
+
+.MuiMenuItem-root:hover,
+.MuiMenuItem-root:focus {
+    background-color: var(--bg-color-secondary) !important;
+    color: var(--text-color) !important;
+}
+
+.MuiPaper-root {
+    color: var(--text-color) !important;
+    box-shadow: none !important;
+    border: var(--border) !important;
+}
+
+.MuiSelect-icon {
+    margin-right: var(--padding) !important;
+}
+
+@media (max-width: 600px) {
+    .select {
+        width: 100%;
+    }
+}
+
+@media (min-width: 600px) {
+    .select {
+        width: 50%;
+    }
 }

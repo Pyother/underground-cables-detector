@@ -2,3 +2,7 @@
     width: 40px;
     height: 40px;
 }
+
+.navigation-container {
+    margin-top: calc(3 * var(--padding) / 4) !important;
+}

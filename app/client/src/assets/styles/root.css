@@ -21,7 +21,7 @@ body {
     padding: 0;
     color: var(--text-color-primary);
     background-color: var(--bg-color-primary);
-    font-family: "Inter", sans-serif;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     font-weight: 300;
     width: 100%;
     height: 100vh;
