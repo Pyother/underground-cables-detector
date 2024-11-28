@@ -35,7 +35,7 @@ const DriveView = () => {
                             value={selectedView}
                             onChange={(event) => setSelectedView(Number(event.target.value))}
                         >
-                            <MenuItem value="1">Mapa</MenuItem>
+                            <MenuItem value="1" divider>Mapa</MenuItem>
                             <MenuItem value="2">Podgląd wideo</MenuItem>
                         </Select>
                     </div>

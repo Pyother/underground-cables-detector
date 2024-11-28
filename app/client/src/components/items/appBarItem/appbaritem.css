@@ -1,10 +1,9 @@
 .appbar-item-container {
-    padding: 1em;
+    padding: calc(var(--padding) / 2);
     background-color: var(--bg-color-secondary) !important;
     width: fit-content;
     height: min-content;
     border-radius: var(--border-radius) !important;
-    margin-right: var(--distance) !important;
     border: var(--border) !important;
 }
 

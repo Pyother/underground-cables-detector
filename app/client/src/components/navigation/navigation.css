@@ -6,3 +6,9 @@
 .navigation-container {
     margin-top: calc(3 * var(--padding) / 4) !important;
 }
+
+.navigation-container-mobile {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
