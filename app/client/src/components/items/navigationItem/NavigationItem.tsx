@@ -30,7 +30,7 @@ const NavigationItem: React.FC<NavigationItemProps> = ({sectionName, Icon, onCli
             disableFocusRipple={!isClickable}
             disableRipple={!isClickable}
             style={{
-                fontSize: iconSize && iconSize === 'large' ? 'xx-large' : 'larger',
+                fontSize: iconSize && iconSize === 'large' ? 'x-large' : 'larger',
                 padding: sectionName === 'logo' ? 'calc(var(--padding) * 3 / 4)' : 'var(--padding)',
                 border: sectionName === 'logo' ? 'var(--border)' : ''
             }}

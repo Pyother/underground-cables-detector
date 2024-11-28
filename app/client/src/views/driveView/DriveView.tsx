@@ -17,6 +17,11 @@ import {
 // * React icons:
 import { TfiAngleDown } from "react-icons/tfi";
 
+// * Services:
+import Map from '../../services/map/Map';
+import Controller from '../../services/controller/Controller';
+import LiveCamera from '../../services/liveCamera/LiveCamera';
+
 const DriveView = () => {
 
     const [selectedView, setSelectedView] = useState(1);
@@ -40,20 +45,28 @@ const DriveView = () => {
                         </Select>
                     </div>
                     <div className="drive-view-cell center">
-                        {selectedView === 1 ? 'Mapa' : 'Podgląd wideo'}
+                        {
+                            selectedView === 1 ? 
+                            <Map /> : 
+                            <LiveCamera />
+                        }
                     </div>
                     <div className="drive-view-cell center">
-                        Kontroler
+                        <Controller />
                     </div>
                 </Stack> :
                 <Grid container className="drive-view-container">
                     <Grid item md={6} lg={6} className="drive-view-cell center">
-                        Mapa
+                        <Map />
                     </Grid>
                     <Grid item md={6} lg={6}>
                         <Stack style={{height: '100%'}}> 
-                            <div className="drive-view-cell center">Podgląd wideo</div>
-                            <div className="drive-view-cell center">Kontroler</div>
+                            <div className="drive-view-cell center">
+                                <LiveCamera />
+                            </div>
+                            <div className="drive-view-cell center">
+                                <Controller />
+                            </div>
                         </Stack>
                     </Grid>
                 </Grid>

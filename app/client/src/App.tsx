@@ -81,10 +81,10 @@ const App = () => {
                 </Stack> :
                 <Grid container className='app'>
                     <Grid item xs={0} sm={0.5} md={1} />
-                    <Grid item xs={12} sm={2} md={1}>
+                    <Grid item xs={12} sm={2} md={1.5} lg={1}>
                         <Navigation />
                     </Grid>
-                    <Grid item xs={12} sm={9} md={9}>
+                    <Grid item xs={12} sm={9} md={8.5} lg={9}>
                         <Stack className="header-content-container">
                             <Header />
                             <Content />

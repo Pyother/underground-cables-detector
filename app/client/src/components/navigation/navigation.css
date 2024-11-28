@@ -4,7 +4,7 @@
 }
 
 .navigation-container {
-    margin-top: calc(3 * var(--padding) / 4) !important;
+    margin-top: calc(3 * var(--padding) / 2) !important;
 }
 
 .navigation-container-mobile {

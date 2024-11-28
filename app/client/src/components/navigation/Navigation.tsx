@@ -10,7 +10,8 @@ import {
     Grid,
     Stack,
     Dialog, 
-    MenuItem
+    MenuItem,
+    Divider
 } from '@mui/material';
 
 // * React icons:
@@ -60,7 +61,7 @@ const Navigation = () => {
                                     handleSectionClick(item.sectionName, item.title, item.subtitle);
                                     setDialogOpened(false);
                                 }}
-                            >{item.title}</MenuItem>
+                            >{item.sectionName}</MenuItem>
                         </React.Fragment>
                     ))}
                 </Stack>
@@ -99,18 +100,20 @@ const Navigation = () => {
                     </Stack>:
                     <Stack 
                         className="navigation-container"
-                        direction={deviceType === "mobile" ? "row" : "column" }
+                        direction={deviceType === "mobile" ? "row" : "column"}
                     >
                         {navigationItemsArray.map((item, index) => (
-                            <NavigationItem 
-                                key={index}
-                                sectionName={item.sectionName}
-                                Icon={item.Icon}
-                                onClick={item.onClick}
-                                isClickable
-                                iconSize="large"
-                                style={{border: selectedSection === item.sectionName ? '1px solid' : 'none'}}
-                            />
+                            <React.Fragment key={index}>
+                                <NavigationItem 
+                                    sectionName={item.sectionName}
+                                    Icon={item.Icon}
+                                    onClick={item.onClick}
+                                    isClickable
+                                    iconSize="large"
+                                    style={{ border: selectedSection === item.sectionName ? '1px solid' : 'none' }}
+                                />
+                                {index !== navigationItemsArray.length - 1 && <Divider />}
+                            </React.Fragment>
                         ))}
                     </Stack>
                 }
