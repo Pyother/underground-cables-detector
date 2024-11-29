@@ -44,10 +44,12 @@ const DriveView = () => {
                             <MenuItem value="2">Podgląd wideo</MenuItem>
                         </Select>
                     </div>
-                    <div className="drive-view-cell center">
+                    <div className="drive-view-cell center"
+                        style={{padding: 'var(--padding) 0'}}
+                    >
                         {
                             selectedView === 1 ? 
-                            <Map /> : 
+                            <Map margin={[0, 0, 0, 0]}/> : 
                             <LiveCamera />
                         }
                     </div>
@@ -56,8 +58,11 @@ const DriveView = () => {
                     </div>
                 </Stack> :
                 <Grid container className="drive-view-container">
-                    <Grid item md={6} lg={6} className="drive-view-cell center">
-                        <Map />
+                    <Grid item md={6} lg={6} 
+                        className="drive-view-cell center"
+                        style={{padding: '0 var(--padding) calc(2 * var(--padding)) 0'}}
+                    >
+                        <Map margin={[0, 1, 0, 0]}/>
                     </Grid>
                     <Grid item md={6} lg={6}>
                         <Stack style={{height: '100%'}}> 
