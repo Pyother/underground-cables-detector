@@ -1,17 +1,41 @@
-type DistanceMeasurement {
-    measurementTime: String
-    measurement: DistanceMeasurementData
-    meta: MetaData
-}
-
-type DistanceMeasurementData {
-    value: Float
-}
-
-type MetaData {
-    operator: String
-}
-
 type Query {
-    getDistanceMeasurementsData: [DistanceMeasurement]
+    getAllMeasurements: [MeasurementRecord!]!
+}
+
+type MeasurementRecord {
+    id: ID!                
+    rideId: String!       
+    rideName: String!      
+    measurements: [Measurement!]!
+}
+
+type Measurement {
+    angle: Int!            
+    distance: Distance!    
+    location: Location!   
+    time: String!          
+}
+
+type Distance {
+    lidar: Int!
+    hcsr04_1: Int!
+    hcsr04_2: Int!
+    hcsr04_3: Int!
+    hcsr04_4: Int!
+}
+
+type Location {
+    magnetometr_1: Magnetometer!
+    magnetometr_2: Magnetometer!
+    encoder: Encoder!
+}
+
+type Magnetometer {
+    x: Int!
+    y: Int!
+}
+
+type Encoder {
+    encoder_1: Int!
+    encoder_2: Int!
 }

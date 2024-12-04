@@ -42,21 +42,23 @@ const App = () => {
         document.body.className = theme;
     }, [theme]);
 
-    const GET_DISTANCE_MEASUREMENTS_DATA = gql`
-        query GetDistanceMeasurementsData {
-            getDistanceMeasurementsData {
-                measurementTime
-                measurement {
-                    value
-                }
-                meta {
-                    operator
+    const GET_BASIC_DATA = gql`
+        query {
+            getAllMeasurements {
+                id
+                rideId
+                rideName
+                measurements {
+                    angle
+                    distance {
+                        lidar
+                    }
                 }
             }
         }
     `;
 
-    const { loading, error, data } = useQuery(GET_DISTANCE_MEASUREMENTS_DATA);
+    const { loading, error, data } = useQuery(GET_BASIC_DATA);
 
     // Temp useEffect for displaying gql query result. 
     useEffect(() => {
