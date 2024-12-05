@@ -14,6 +14,9 @@ import wifiQualityReducer from '../features/networkFeatures/WiFiQualitySlice';
 // * Device state features:
 import energyReducer from '../features/deviceStateFeatures/EnergySlice';
 
+// * Data features:
+import basicDataReducer from '../features/dataFeatures/BasicDataSlice';
+
 export const store = configureStore({
     reducer: {
         deviceType: deviceTypeReducer,
@@ -22,6 +25,7 @@ export const store = configureStore({
         connection: connectionReducer,
         energy: energyReducer,
         wifi: wifiQualityReducer,
+        basicData: basicDataReducer,
     },
 });
 

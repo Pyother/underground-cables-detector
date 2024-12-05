@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setDeviceType } from './features/layoutFeatures/DeviceTypeSlice.js';
+import { setBasicData } from './features/dataFeatures/BasicDataSlice.js';
 import { RootState } from './store/store';
 
 // * GraphQL:
@@ -48,12 +49,6 @@ const App = () => {
                 id
                 rideId
                 rideName
-                measurements {
-                    angle
-                    distance {
-                        lidar
-                    }
-                }
             }
         }
     `;
@@ -66,6 +61,7 @@ const App = () => {
             console.log('loading');
         } else {
             console.log(data);
+            dispatch(setBasicData(data.getAllMeasurements));
         }
         if (error) {
             console.log(error);
