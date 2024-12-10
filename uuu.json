@@ -1,0 +1,16 @@
+{
+    "workerTypes": [
+        {
+            "workerType": "A",
+            "offerWaitTime": 20
+        },
+        {
+            "workerType": "B",
+            "offerWaitTime": 20
+        },
+        {
+            "workerType": "C",
+            "offerWaitTime": 20
+        }
+    ]
+}
